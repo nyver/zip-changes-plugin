@@ -5,15 +5,18 @@
     This plugin adds an extra action to the ChangeList popup menu. It allows for creating a zip file
     containing specific changes.
     <p/>
-    The plugin searches for a common ancestor to create a meaningfull folder structure inside the zip
+    The plugin searches for a common ancestor to create a meaningful folder structure inside the zip
     file.
   ]]></description>
-  
-  <version>1.0</version>
+
+  <version>1.1</version>
   <vendor email="bcremers@gmail.com">Bart Cremers</vendor>
   <idea-version since-build="7000"/>
   <change-notes><![CDATA[
-Initial release.
+<ul>
+  <li>Upgrade to work with latest IDEA releases.</li>
+  <li>Code uploaded to GitHub (thanks Yuri)</li>
+</ul>
   ]]></change-notes>
   <depends>com.intellij.modules.lang</depends>
   <project-components>

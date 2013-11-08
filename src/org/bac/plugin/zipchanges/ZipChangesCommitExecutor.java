@@ -4,7 +4,6 @@
 package org.bac.plugin.zipchanges;
 
 import com.intellij.openapi.components.ProjectComponent;
-import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.util.ProgressIndicatorBase;
 import com.intellij.openapi.project.Project;
