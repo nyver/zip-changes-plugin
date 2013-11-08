@@ -1,0 +1,32 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin url="http://intelli-plugins.sourceforge.net/" >
+  <name>ZipChanges</name>
+  <description><![CDATA[
+    This plugin adds an extra action to the ChangeList popup menu. It allows for creating a zip file
+    containing specific changes.
+    <p/>
+    The plugin searches for a common ancestor to create a meaningfull folder structure inside the zip
+    file.
+  ]]></description>
+  
+  <version>1.0</version>
+  <vendor email="bcremers@gmail.com">Bart Cremers</vendor>
+  <idea-version since-build="7000"/>
+  <change-notes><![CDATA[
+Initial release.
+  ]]></change-notes>
+  <depends>com.intellij.modules.lang</depends>
+  <project-components>
+    <component>
+      <implementation-class>org.bac.plugin.zipchanges.ZipChangesCommitExecutor</implementation-class>
+      <interface-class>org.bac.plugin.zipchanges.ZipChangesCommitExecutor</interface-class>
+    </component>
+  </project-components>
+  <actions>
+    <action id="zipChanges" class="org.bac.plugin.zipchanges.ZipChangesAction" text="Zip Changes"
+            description="Zip changes in current change list" icon="/icon/zipIcon.png">
+      <add-to-group group-id="ChangesViewPopupMenu" anchor="after" relative-to-action="ChangesView.Shelve" />
+      <add-to-group group-id="ChangesViewToolbar" anchor="last" />
+    </action>
+  </actions>
+</idea-plugin>
